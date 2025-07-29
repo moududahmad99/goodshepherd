@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaArrowRight, FaPills, FaUserMd, FaRegSmile, FaRegClock, FaClinicMedical, FaShippingFast, FaSearch, FaRegCalendarAlt, FaStar } from 'react-icons/fa';
-import { FaAward, FaGraduationCap, FaGlobeAmericas, FaHeartbeat } from 'react-icons/fa';
+import { FaAward, FaGraduationCap, FaShieldAlt, FaTruck, FaGlobeAmericas, FaHeartbeat } from 'react-icons/fa';
 import { RiMedicineBottleLine, RiLeafLine } from 'react-icons/ri';
 import { motion } from 'framer-motion';
 import feature1 from '../assets/1.jpg';
@@ -30,31 +30,34 @@ const Home = () => {
 
 
   const features = [
-     {
-      title: "Expert Consultations",
-      description: "Specialist pharmacist guidance Triple-verified medication accuracy",
-      icon: <FaUserMd className="w-6 h-6 text-[#10b981]" />
-    },{
-      title: "Precision Pharmacy",
-      description: "Triple-verified Triple-verified medication accuracy medication accuracy",
-      icon: <FaPills className="w-6 h-6 text-[#3b82f6]" />
+    {
+      title: "Medication Management",
+      description: "99.9% accuracy with triple-check verification",
+      icon: <FaPills className="w-6 h-6 text-[#5C90A5]" />
     },
     {
-      title: "Expert Consultations",
-      description: "Specialist pharmacist guidance Triple-verified medication accuracy",
-      icon: <FaUserMd className="w-6 h-6 text-[#10b981]" />
-    },{
-      title: "Precision Pharmacy",
-      description: "Triple-verified Triple-verified medication accuracy medication accuracy",
-      icon: <FaPills className="w-6 h-6 text-[#3b82f6]" />
+      title: "Vaccination Services",
+      description: "Comprehensive immunization programs",
+      icon: <FaHeartbeat className="w-6 h-6 text-[#5C90A5]" />
     },
+    {
+      title: "Safety Protocols",
+      description: "ISO 9001 certified facility",
+      icon: <FaShieldAlt className="w-6 h-6 text-[#5C90A5]" />
+    },
+    {
+      title: "Concierge Delivery",
+      description: "Temperature-controlled logistics",
+      icon: <FaTruck className="w-6 h-6 text-[#5C90A5]" />
+    }
   ];
 
+
   const galleryImages = [
-    { src: feature1, alt: "Modern Pharmacy Interior" },
-    { src: feature2, alt: "Vaccination Services" },
-    { src: feature3, alt: "Medicine Preparation" },
-    { src: feature4, alt: "Customer Care" }
+    { image: feature1, alt: "Medical Equipment", caption: "State-of-the-art Facilities" },
+    { image: feature2, alt: "Vaccination Services", caption: "Immunization Center" },
+    { image: feature3, alt: "Pharmacy Interior", caption: "Modern Pharmacy" },
+    { image: feature4, alt: "Skin Care", caption: "Dermatological Solutions" }
   ];
   return (
 
@@ -188,20 +191,20 @@ const Home = () => {
                 transition={{ delay: 0.8 }}
               >
                 <motion.div
-  whileHover={{ scale: 1.05 }}
-  whileTap={{ scale: 0.98 }}
-  className="cursor-pointer"
->
-  <Link
-    to="/services"
-    className="relative overflow-hidden group bg-gradient-to-r from-[#3b82f6] to-[#10b981] text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-[#3b82f6]/40 block"
-  >
-    <span className="relative z-10 flex items-center justify-center gap-2">
-      Explore Services <FaArrowRight className="transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110" />
-    </span>
-    <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-  </Link>
-</motion.div>
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="cursor-pointer"
+                >
+                  <Link
+                    to="/services"
+                    className="relative overflow-hidden group bg-gradient-to-r from-[#3b82f6] to-[#10b981] text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-[#3b82f6]/40 block"
+                  >
+                    <span className="relative z-10 flex items-center justify-center gap-2">
+                      Explore Services <FaArrowRight className="transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110" />
+                    </span>
+                    <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
+                  </Link>
+                </motion.div>
 
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -529,56 +532,75 @@ const Home = () => {
           </motion.div>
 
           {/* Content Grid */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+          <div className="grid lg:grid-cols-1 gap-12 items-center mb-20">
             {/* Text Content */}
-            <div className="space-y-10">
-              {features.map((feature, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
-                  className="group"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#e0f2fe] to-[#dbeafe] flex items-center justify-center group-hover:rotate-12 transition-transform">
-                      {feature.icon}
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-[#1e293b] mb-2">{feature.title}</h3>
-                      <p className="text-[#475569]">{feature.description}</p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+             
 
             {/* STUNNING IMAGE GALLERY */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              className="grid grid-cols-2 gap-4"
-            >
-              {galleryImages.map((img, i) => (
+            <div className="flex flex-col lg:flex-row gap-12 mb-20">
+              {/* Left side - Text content */}
+              <div className="lg:w-1/2">
+                <h3 className="text-3xl font-bold text-[#404460] mb-8">Our Distinguished Services</h3>
+                <div className="space-y-8">
+                  {features.map((feature, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, x: -30 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                      className="group"
+                    >
+                      <div className="flex items-start gap-4 p-6 hover:bg-[#f8fafc] rounded-lg transition-all">
+                        <div className="w-10 h-10 bg-[#5C90A5]/10 rounded-full flex items-center justify-center">
+                          {feature.icon}
+                        </div>
+                        <div>
+                          <h4 className="text-xl font-semibold text-[#404460] mb-2">{feature.title}</h4>
+                          <p className="text-[#364153] opacity-90 leading-relaxed">
+                            {feature.description}
+                          </p>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Right side - Enhanced Image Gallery */}
+              <div className="lg:w-1/2">
                 <motion.div
-                  key={i}
-                  whileHover={{ scale: 1.03 }}
-                  className={`relative overflow-hidden rounded-xl aspect-square shadow-lg ${i === 0 ? "rotate-1" :
-                      i === 1 ? "-rotate-1" :
-                        i === 2 ? "rotate-2" : "-rotate-2"
-                    } hover:rotate-0 transition-all duration-300`}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.4 }}
+                  className="grid grid-cols-2 gap-4"
                 >
-                  <img
-                    src={img.src}
-                    alt={img.alt}
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                    <span className="text-white font-medium drop-shadow-lg">{img.alt}</span>
-                  </div>
+                  {galleryImages.map((img, index) => (
+                    <motion.div
+                      key={index}
+                      whileHover={{ scale: 1.03 }}
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: 0.2 + index * 0.1 }}
+                      className={`relative overflow-hidden rounded-xl aspect-square shadow-lg ${index % 2 === 0 ? "rotate-1" : "-rotate-1"
+                        } hover:rotate-0 transition-all duration-300`}
+                    >
+                      <img
+                        src={img.image}
+                        alt={img.alt}
+                        className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                      />
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileHover={{ opacity: 1, y: 0 }}
+                        className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4"
+                      >
+                        <span className="text-white font-medium">{img.caption}</span>
+                      </motion.div>
+                    </motion.div>
+                  ))}
                 </motion.div>
-              ))}
-            </motion.div>
+              </div>
+            </div>
           </div>
 
           {/* Stats */}
