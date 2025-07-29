@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import { FaArrowRight, FaPills, FaUserMd, FaShippingFast, FaSearch, FaRegCalendarAlt, FaStar } from 'react-icons/fa';
+import { FaArrowRight, FaPills, FaUserMd, FaRegSmile, FaRegClock, FaClinicMedical, FaShippingFast, FaSearch, FaRegCalendarAlt, FaStar } from 'react-icons/fa';
 import { FaAward, FaGraduationCap, FaGlobeAmericas, FaHeartbeat } from 'react-icons/fa';
-
 import { RiMedicineBottleLine, RiLeafLine } from 'react-icons/ri';
 import { motion } from 'framer-motion';
-
+import feature1 from '../assets/1.jpg';
+import feature2 from '../assets/2.jpg';
+import feature3 from '../assets/3.jpg';
+import feature4 from '../assets/4.jpg';
+import { Link } from 'react-router-dom';
 const Home = () => {
 
   const SafeMotion = ({ children, ...props }) => {
@@ -15,13 +18,51 @@ const Home = () => {
   const [prescriptionNumber, setPrescriptionNumber] = useState('');
   const [birthDate, setBirthDate] = useState('');
 
+
+  const stats = [
+    { icon: <FaRegClock className="w-8 h-8" />, value: "5+", label: "Years Serving" },
+    { icon: <FaPills className="w-8 h-8" />, value: "1240+", label: "Prescriptions" },
+    { icon: <FaUserMd className="w-8 h-8" />, value: "2", label: "Specialists" },
+    { icon: <FaRegSmile className="w-8 h-8" />, value: "99.7%", label: "Satisfaction" }
+  ];
+
+
+
+
+  const features = [
+     {
+      title: "Expert Consultations",
+      description: "Specialist pharmacist guidance Triple-verified medication accuracy",
+      icon: <FaUserMd className="w-6 h-6 text-[#10b981]" />
+    },{
+      title: "Precision Pharmacy",
+      description: "Triple-verified Triple-verified medication accuracy medication accuracy",
+      icon: <FaPills className="w-6 h-6 text-[#3b82f6]" />
+    },
+    {
+      title: "Expert Consultations",
+      description: "Specialist pharmacist guidance Triple-verified medication accuracy",
+      icon: <FaUserMd className="w-6 h-6 text-[#10b981]" />
+    },{
+      title: "Precision Pharmacy",
+      description: "Triple-verified Triple-verified medication accuracy medication accuracy",
+      icon: <FaPills className="w-6 h-6 text-[#3b82f6]" />
+    },
+  ];
+
+  const galleryImages = [
+    { src: feature1, alt: "Modern Pharmacy Interior" },
+    { src: feature2, alt: "Vaccination Services" },
+    { src: feature3, alt: "Medicine Preparation" },
+    { src: feature4, alt: "Customer Care" }
+  ];
   return (
 
     <React.Fragment>
       {/* Banner Section */}
       <div className="overflow-x-hidden bg-white">
         {/* Hero Section */}
-        <section className="relative h-[800px] w-full flex items-center justify-center overflow-hidden">
+        <section className="relative h-[750px] w-full flex items-center justify-center overflow-hidden">
           {/* Background Image with Custom Gradient Overlay */}
           <div className="absolute inset-0">
             <img
@@ -30,14 +71,14 @@ const Home = () => {
               className="w-full h-full object-cover object-center"
             />
             {/* Custom Light Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-white/50 via-white/70 to-white/10"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-white/50 via-white/70 to-white/90"></div>
             {/* Subtle Texture */}
             <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuMDMiLz48L3N2Zz4=')]"></div>
           </div>
 
           {/* Floating Medical Elements */}
           <motion.div
-            className="absolute top-1/4 left-[15%] w-20 h-20 text-[#3b82f6] opacity-20"
+            className="absolute top-1/4 left-[15%] w-20 h-20 text-[#52637e] opacity-20"
             animate={{
               y: [0, -25, 0],
               rotate: [0, 15, -15, 0],
@@ -53,7 +94,7 @@ const Home = () => {
           </motion.div>
 
           <motion.div
-            className="absolute bottom-1/3 right-[20%] w-16 h-16 text-[#10b981] opacity-20"
+            className="absolute bottom-1/3 right-[20%] w-16 h-16 text-[#9cccbc] opacity-20"
             animate={{
               y: [0, 25, 0],
               rotate: [0, -20, 20, 0],
@@ -103,7 +144,7 @@ const Home = () => {
                 className="text-4xl sm:text-5xl font-extrabold leading-tight"
               >
                 <motion.span
-                  className="block text-transparent bg-clip-text bg-gradient-to-r from-[#3b82f6] via-[#10b981] to-[#3b82f6] bg-[length:200%_auto] animate-gradient-shift"
+                  className="block text-transparent bg-clip-text bg-gradient-to-r from-[#3b82f6] via-[#112720] to-[#3b82f6] bg-[length:200%_auto] animate-gradient-shift"
                   initial={{ backgroundPosition: '0% center' }}
                   animate={{ backgroundPosition: '200% center' }}
                   transition={{
@@ -146,16 +187,21 @@ const Home = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 }}
               >
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="relative overflow-hidden group bg-gradient-to-r from-[#3b82f6] to-[#10b981] text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-[#3b82f6]/40"
-                >
-                  <span className="relative z-10 flex items-center justify-center gap-2">
-                    Explore Services <FaArrowRight className="transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110" />
-                  </span>
-                  <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-                </motion.button>
+                <motion.div
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.98 }}
+  className="cursor-pointer"
+>
+  <Link
+    to="/services"
+    className="relative overflow-hidden group bg-gradient-to-r from-[#3b82f6] to-[#10b981] text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-[#3b82f6]/40 block"
+  >
+    <span className="relative z-10 flex items-center justify-center gap-2">
+      Explore Services <FaArrowRight className="transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110" />
+    </span>
+    <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
+  </Link>
+</motion.div>
 
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -181,28 +227,7 @@ const Home = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.2 }}
                 className="flex flex-wrap items-center gap-4 pt-6"
-              >
-                {/* <div className="flex items-center gap-1">
-      {[...Array(5)].map((_, i) => (
-        <motion.div
-          key={i}
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 1.3 + i * 0.1 }}
-        >
-          <FaStar className="w-5 h-5 text-[#f59e0b] drop-shadow-[0_1px_2px_#f59e0b/30]" />
-        </motion.div>
-      ))}
-    </div> */}
-                {/* <motion.span 
-      className="text-sm font-medium bg-clip-text text-transparent bg-gradient-to-r from-[#1e293b] to-[#334155]"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 1.8 }}
-    >
-      Trusted by 1,200+ patients with 98% satisfaction rate
-    </motion.span> */}
-              </motion.div>
+              ></motion.div>
             </div>
 
             {/* Right Column - Refill Card */}
@@ -217,7 +242,7 @@ const Home = () => {
                 <div className="absolute -right-5 -bottom-5 w-20 h-20 bg-white/5 rounded-full"></div>
                 <h3 className="text-2xl font-bold flex items-center gap-3 relative z-10">
                   <FaPills className="w-6 h-6" />
-                  Instant Prescription Refill
+                  Request Prescription Refill
                 </h3>
                 <p className="text-sm opacity-90 relative z-10">Renew your medications in seconds</p>
               </div>
@@ -250,13 +275,13 @@ const Home = () => {
                   </div>
                 </div>
 
-                <button className="w-full mt-4 bg-gradient-to-r from-[#3b82f6] to-[#10b981] text-white font-semibold py-2.5 px-4 rounded-lg hover:shadow-md transition-all flex items-center justify-center gap-2">
+                <button className="w-full mt-4 bg-gradient-to-r from-[#3b82f6] to-[#10b981] text-white font-semibold py-2.5 px-4 rounded-lg hover:shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer">
                   <FaPills className="w-4 h-4" /> Find & Refill Now
                 </button>
 
                 <div className="pt-4 border-t border-gray-100 flex items-center justify-between">
                   <p className="text-sm text-[#64748b]">
-                    Need help? <a href="#" className="text-[#3b82f6] hover:underline">Contact us</a>
+                    Need help? <Link to="/contacts" className="text-[#3b82f6] hover:underline">Contact</Link>
                   </p>
                   <div className="flex items-center gap-1">
                     <FaStar className="w-4 h-4 text-[#f59e0b]" />
@@ -278,7 +303,7 @@ const Home = () => {
               <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg border border-gray-100 p-6 grid grid-cols-2 md:grid-cols-4 gap-6">
                 {[
                   { icon: <FaUserMd className="w-5 h-5" />, value: "12+", label: "Specialist Pharmacists", color: "bg-[#dbeafe] text-[#3b82f6]" },
-                  { icon: <FaPills className="w-5 h-5" />, value: "250K+", label: "Prescriptions Filled", color: "bg-[#dcfce7] text-[#10b981]" },
+                  { icon: <FaPills className="w-5 h-5" />, value: "1490+", label: "Prescriptions Filled", color: "bg-[#dcfce7] text-[#10b981]" },
                   { icon: <RiLeafLine className="w-5 h-5" />, value: "100%", label: "Quality Guarantee", color: "bg-[#f0fdf4] text-[#22c55e]" },
                   { icon: <FaShippingFast className="w-5 h-5" />, value: "24/7", label: "Emergency Service", color: "bg-[#eff6ff] text-[#2563eb]" }
                 ].map((stat, index) => (
@@ -428,7 +453,7 @@ const Home = () => {
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                     </svg>
-                     Dr. Mervat Mellak
+                    Dr. Mervat Mellak
                   </a>
                 </motion.div>
               </div>
@@ -455,9 +480,9 @@ const Home = () => {
                 className="bg-white/90 backdrop-blur-sm p-6 rounded-xl border border-gray-100 shadow-sm text-center"
               >
                 <div className={`w-14 h-14 mx-auto mb-4 rounded-full flex items-center justify-center ${index === 0 ? "bg-[#dbeafe] text-[#3b82f6]" :
-                    index === 1 ? "bg-[#f0fdf4] text-[#10b981]" :
-                      index === 2 ? "bg-[#eff6ff] text-[#2563eb]" :
-                        "bg-[#fef2f2] text-[#ef4444]"
+                  index === 1 ? "bg-[#f0fdf4] text-[#10b981]" :
+                    index === 2 ? "bg-[#eff6ff] text-[#2563eb]" :
+                      "bg-[#fef2f2] text-[#ef4444]"
                   }`}>
                   {item.icon}
                 </div>
@@ -469,6 +494,137 @@ const Home = () => {
         </div>
       </section>
 
+
+
+
+      {/* About  */}
+      <section className="relative py-24 bg-gradient-to-br from-[#f0f4ff] to-[#f8fafc] overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute -top-32 -right-32 w-64 h-64 rounded-full bg-[#3b82f6]/10 blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent z-10"></div>
+
+        <div className="max-w-7xl mx-auto px-6 relative z-20">
+          {/* Header with animated underline */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="text-center mb-20"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1e293b] mb-6">
+              <span className="relative inline-block">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#091a35] to-[#10b981]">
+                  About US
+                </span>
+                <motion.span
+                  initial={{ width: 0 }}
+                  whileInView={{ width: "100%" }}
+                  transition={{ duration: 1, delay: 0.3 }}
+                  className="absolute -bottom-2 left-0 h-1 bg-gradient-to-r from-[#3b82f6] to-[#10b981] rounded-full"
+                />
+              </span>
+            </h2>
+            <p className="text-xl text-[#475569] max-w-3xl mx-auto">
+              Where clinical precision meets compassionate care in our state-of-the-art facility
+            </p>
+          </motion.div>
+
+          {/* Content Grid */}
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+            {/* Text Content */}
+            <div className="space-y-10">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  className="group"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#e0f2fe] to-[#dbeafe] flex items-center justify-center group-hover:rotate-12 transition-transform">
+                      {feature.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-[#1e293b] mb-2">{feature.title}</h3>
+                      <p className="text-[#475569]">{feature.description}</p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* STUNNING IMAGE GALLERY */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              className="grid grid-cols-2 gap-4"
+            >
+              {galleryImages.map((img, i) => (
+                <motion.div
+                  key={i}
+                  whileHover={{ scale: 1.03 }}
+                  className={`relative overflow-hidden rounded-xl aspect-square shadow-lg ${i === 0 ? "rotate-1" :
+                      i === 1 ? "-rotate-1" :
+                        i === 2 ? "rotate-2" : "-rotate-2"
+                    } hover:rotate-0 transition-all duration-300`}
+                >
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <span className="text-white font-medium drop-shadow-lg">{img.alt}</span>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+
+          {/* Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-200 shadow-sm mb-20"
+          >
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {stats.map((stat, i) => (
+                <motion.div
+                  key={i}
+                  whileHover={{ y: -5 }}
+                  className="text-center"
+                >
+                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-[#e0f2fe] to-[#dbeafe] rounded-full flex items-center justify-center text-[#3b82f6]">
+                    {stat.icon}
+                  </div>
+                  <div className="text-3xl font-bold text-[#1e293b] mb-1">{stat.value}</div>
+                  <div className="text-sm text-[#64748b] uppercase tracking-wider">{stat.label}</div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Quality Promise */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="relative rounded-2xl overflow-hidden"
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-[#3b82f6] to-[#6366f1] opacity-95"></div>
+            <div className="relative z-10 p-12 text-center text-white">
+              <div className="w-20 h-20 mx-auto mb-6 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                <FaAward className="w-8 h-8" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4">Our Quality Guarantee</h3>
+              <p className="text-white/90 max-w-3xl mx-auto">
+                Every prescription undergoes 7-point verification by our specialist pharmacists,
+                with ingredients sourced only from FDA-approved manufacturers.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     </React.Fragment>
   );
 };
