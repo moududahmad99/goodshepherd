@@ -44,6 +44,7 @@ export default function Navbar() {
                 className="h-13 w-14"
                 style={{ transform: 'rotate(-1deg)' }}
               />
+              
             </Link>
           </motion.div>
 
