@@ -397,12 +397,12 @@ const Home = () => {
               <div className="w-full md:w-2/5 h-80 md:h-auto relative overflow-hidden">
                 <img
                   src="/src/assets/user.webp" // Replace with actual image
-                  alt="Dr. Mervat Mellak"
+                  alt="Dr. Natalia"
                   className="w-full h-full object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <h3 className="text-2xl font-bold">Dr. Mervat Mellak</h3>
+                  <h3 className="text-2xl font-bold">Dr. Natalia</h3>
                   <p className="text-sm opacity-90">Founder & CEO</p>
                 </div>
               </div>
@@ -420,7 +420,7 @@ const Home = () => {
                 </div>
 
                 <p className="text-[#475569] mb-6 leading-relaxed">
-                  With a distinguished career spanning over 7+ years, <span className="font-semibold text-[#1e293b]">Dr. Mervat Mellak</span> has revolutionized pharmaceutical care through her visionary leadership and unwavering commitment to patient well-being. Her expertise in precision medicine and personalized treatment has set new industry standards.
+                  With a distinguished career spanning over 7+ years, <span className="font-semibold text-[#1e293b]">Dr. Natalia</span> has revolutionized pharmaceutical care through her visionary leadership and unwavering commitment to patient well-being. Her expertise in precision medicine and personalized treatment has set new industry standards.
                 </p>
 
                 <div className="space-y-4">
@@ -450,13 +450,13 @@ const Home = () => {
                   className="mt-8"
                 >
                   <a
-                    href="mailto:mervatmellak@yahoo.com"
+                    href="mailto:journalsquarepharmacy@yahoo.com"
                     className="inline-flex items-center gap-2 bg-gradient-to-r from-[#3b82f6] to-[#10b981] text-white font-semibold py-3 px-6 rounded-full hover:shadow-lg transition-all"
                   >
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                     </svg>
-                    Dr. Mervat Mellak
+                    Dr. Natalia
                   </a>
                 </motion.div>
               </div>

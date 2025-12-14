@@ -33,11 +33,12 @@ export default function Footer() {
                 className="z-50"
               >
                 <Link to="/">
-                  <img
+                  {/* <img
                     src="/src/assets/logo.jpg"
                     alt="Logo"
                     className="h-12 w-auto"
-                  />
+                  /> */}
+                  <h1>Journal Square</h1>
                 </Link>
               </div>
             </Link>
@@ -98,20 +99,20 @@ export default function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <p className="text-[#7b8ac2] group-hover:text-[#ffffff] transition-colors duration-300">2717 Murfreesboro Pike B, Antioch, TN 37013, United States</p>
+                <p className="text-[#7b8ac2] group-hover:text-[#ffffff] transition-colors duration-300">2801 John F. Kennedy Blvd, Jersey City, NJ 07306, United States</p>
               </div>
               <div className="flex items-center group">
                 <svg className="h-5 w-5 text-[#ffffff] mr-3 group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <p className="text-[#7b8ac2] group-hover:text-[#ffffff] transition-colors duration-300">+1 (615) 600 5116</p>
+                <p className="text-[#7b8ac2] group-hover:text-[#ffffff] transition-colors duration-300">+1 (201) 222-6655</p>
               </div>
               <div className="flex items-center group">
                 <svg className="h-5 w-5 text-[#ffffff] mr-3 group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <a href="mailto:mervatmellak@yahoo.com" className="text-[#7b8ac2] group-hover:text-[#ffffff] transition-colors duration-300">
-                  mervatmellak@yahoo.com
+                <a href="mailto:journalsquarepharmacy@yahoo.com" className="text-[#7b8ac2] group-hover:text-[#ffffff] transition-colors duration-300">
+                  journalsquarepharmacy@yahoo.com
                 </a>
               </div>
             </div>
@@ -136,7 +137,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="border-t border-[#2A4759] mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-[#4E6688] text-sm">
-            © {new Date().getFullYear()} Good Shepherd. All rights reserved.
+            © {new Date().getFullYear()} Journal Square. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             {['Privacy Policy', 'Terms of Service', 'Sitemap'].map((item) => (

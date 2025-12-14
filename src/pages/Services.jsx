@@ -212,10 +212,10 @@ const Services = () => {
               Our pharmacists are available to discuss how we can support your health journey.
             </p>
             <a
-              href="tel:+16156005116"
+              href="tel:+12012226655"
               className="inline-block bg-white text-[#3E3F5B] px-8 py-4 rounded-full font-bold text-lg hover:bg-opacity-90 transition shadow-lg"
             >
-              Call Now: (615) 600-5116
+              Call Now: +1 (201) 222-6655
             </a>
           </div>
         </motion.div>

@@ -57,7 +57,7 @@ const About = () => {
   ];
 
   const team = [
-    { initials: "M", name: "Dr. Mervat Mellak", role: "Founder-CEO", bio: "Specializes in custom medication formulations." }
+    { initials: "M", name: "Dr. Natalia", role: "Founder-CEO", bio: "Specializes in custom medication formulations." }
   ];
 
   return (

@@ -39,9 +39,10 @@ export default function Navbar() {
           >
             <Link to="/">
               <img
-                src="/src/assets/logo.jpg"
+                src="/src/assets/km-removebg-preview.png"
                 alt="Logo"
-                className="h-12 w-auto"
+                className="h-13 w-14"
+                style={{ transform: 'rotate(-1deg)' }}
               />
             </Link>
           </motion.div>

@@ -89,7 +89,7 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="pl-16 space-y-4">
-                  <p className="text-gray-700">2717 Murfreesboro Pike B, Antioch, TN 37013, United States</p>
+                  <p className="text-gray-700">2801 John F. Kennedy Blvd, Jersey City, NJ 07306, United States</p>
 
                   <div className="pt-4 border-t border-gray-100">
                     <div className="flex items-center text-gray-700 mb-2">
@@ -98,24 +98,20 @@ const Contact = () => {
                     </div>
                     <div className="grid grid-cols-1 gap-1 text-sm">
                       <div>
-                        <p className="font-medium">Monday</p>
-                        <p>8:30 AM - 4:00 PM</p>
+                        <p className="font-medium">Saturday</p>
+                        <p>11:00 AM - 5:00 PM</p>
                       </div>
                       <hr className="opacity-25" />
                       <div>
-                        <p className="font-medium">Tue & Thu</p>
-                        <p>10:00 AM - 6:00 PM</p>
+                        <p className="font-medium">Mon - Fri</p>
+                        <p>10:00 AM - 7:00 PM</p>
                       </div>
-                      <hr className="opacity-25" />
-
-                      <div>
-                        <p className="font-medium">Wed & Fri</p>
-                        <p>10:00 AM - 4:00 PM</p>
-                      </div>
+                      {/* <hr className="opacity-25" /> */}
+     
                       <hr className="opacity-25" />
 
                       <div>
-                        <p className="font-medium">Sat-Sun</p>
+                        <p className="font-medium">Sunday</p>
                         <p>Closed</p>
                       </div>
                     </div>
@@ -163,7 +159,7 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="pl-16">
-                  <p className="text-lg font-bold text-[#0f0707] mb-2">+1 (615) 600 5116
+                  <p className="text-lg font-bold text-[#0f0707] mb-2">+1 (201) 222-6655
 
 </p>
                   {/* <p className="text-gray-700 mb-3">Or your local emergency number</p> */}
