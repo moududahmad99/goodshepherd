@@ -39,7 +39,7 @@ export default function Navbar() {
           >
             <Link to="/">
               <img
-                src="/src/assets/km-removebg-preview.png"
+                src="/src/assets/logo.png"
                 alt="Logo"
                 className="h-13 w-14"
                 style={{ transform: 'rotate(-1deg)' }}
